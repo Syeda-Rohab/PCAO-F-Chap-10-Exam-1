@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ur-Latn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Governance, Risk &amp; Responsible Use - Explanation</title>
+<style>
+  * { box-sizing: border-box; }
+  html { font-size: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0d0d0d;
+    color: #e8e8e8;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  .container { max-width: 780px; margin: 0 auto; padding: 32px 20px 60px; }
+  header {
+    text-align: center;
+    padding: 28px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #fff;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+  }
+  header h1 { margin: 0 0 8px; font-size: 1.5em; }
+  header p { margin: 0; opacity: 0.75; font-style: italic; font-size: 0.95em; }
+  h2 {
+    color: #ffd75e;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    font-size: 1.25em;
+  }
+  .para-block {
+    background: #171717;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    border-left: 4px solid #555;
+  }
+  .para-label { color: #ff8a65; font-weight: 700; font-size: 0.9em; margin-bottom: 6px; display: block; }
+  .para-text { margin: 0; font-size: 1em; color: #ddd; }
+  .diagram-box {
+    background: #171717;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 18px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    border: 1px solid #2a2a2a;
+  }
+  .diagram-box svg { width: 100%; height: auto; display: block; }
+  .diagram-caption { text-align: center; font-size: 0.85em; color: #999; margin-top: 10px; font-style: italic; }
+  table.mini-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.85em; }
+  table.mini-table th, table.mini-table td { border: 1px solid #333; padding: 6px 8px; text-align: right; color: #ddd; }
+  table.mini-table th { background: #222; color: #ffd75e; }
+  .summary-box {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-top: 20px;
+  }
+  .summary-box ul { padding-left: 20px; margin: 0; }
+  .summary-box li { margin-bottom: 10px; color: #ddd; }
+  footer { text-align: center; font-size: 0.8em; color: #777; margin-top: 40px; }
+  footer a { color: #ffd75e; }
+
+  .quiz-intro {
+    background: #221c0e;
+    border: 1px solid #4a3d1a;
+    border-radius: 10px;
+    padding: 14px 18px;
+    color: #e0c060;
+    font-size: 0.95em;
+  }
+  .quiz-question {
+    background: #171717;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 16px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    border-left: 4px solid #ff8a65;
+  }
+  .quiz-q-text { margin: 0 0 12px; font-size: 1em; color: #f0f0f0; }
+  .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+  .quiz-option {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; border: 1px solid #333; border-radius: 8px;
+    cursor: pointer; transition: background 0.15s, border-color 0.15s; font-size: 0.95em;
+    color: #ddd; background: #1c1c1c;
+  }
+  .quiz-option:hover { background: #242424; border-color: #555; }
+  .quiz-option input { accent-color: #ffd75e; width: 16px; height: 16px; flex-shrink: 0; }
+  .quiz-option.correct-answer { background: #14301c; border-color: #2e7d32; font-weight: 600; color: #8fe6a0; }
+  .quiz-option.wrong-answer { background: #341414; border-color: #c62828; color: #ff9e9e; }
+  .quiz-explain { margin-top: 12px; padding: 10px 14px; background: #1c1c1c; border-radius: 8px; font-size: 0.9em; color: #bbb; border: 1px solid #2a2a2a; }
+  .quiz-actions { text-align: center; margin: 30px 0 10px; }
+  .btn-primary, .btn-secondary {
+    padding: 12px 28px; font-size: 1em; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: 600; margin: 0 6px;
+  }
+  .btn-primary { background: #ffd75e; color: #111; }
+  .btn-primary:hover { background: #e0bd40; }
+  .btn-secondary { background: #2a2a2a; color: #eee; }
+  .btn-secondary:hover { background: #3a3a3a; }
+  .score-banner {
+    text-align: center; font-size: 1.15em; font-weight: 700;
+    padding: 16px 20px; border-radius: 10px; margin: 20px 0;
+  }
+  .score-banner.pass { background: #14301c; color: #8fe6a0; border: 1px solid #2e7d32; }
+  .score-banner.fail { background: #341414; color: #ff9e9e; border: 1px solid #c62828; }
+
+  @media (max-width: 600px) {
+    .container { padding: 16px 12px 40px; }
+    header { padding: 20px 14px; border-radius: 10px; margin-bottom: 20px; }
+    header h1 { font-size: 1.3em; line-height: 1.4; }
+    header p { font-size: 0.95em; }
+    h2 { font-size: 1.15em; margin-top: 28px; padding-bottom: 6px; }
+    .para-block { padding: 14px 16px; margin: 10px 0; border-radius: 8px; }
+    .para-label { font-size: 0.95em; }
+    .para-text { font-size: 1em; line-height: 1.65; }
+    .diagram-box { padding: 10px; border-radius: 10px; }
+    .diagram-caption { font-size: 0.8em; }
+    table.mini-table { font-size: 0.72em; }
+    table.mini-table th, table.mini-table td { padding: 4px 4px; }
+    .summary-box { padding: 16px 18px; border-radius: 10px; }
+    .summary-box li { font-size: 1em; }
+    .quiz-intro { padding: 14px 16px; font-size: 0.98em; }
+    .quiz-question { padding: 16px 16px; margin: 12px 0; border-radius: 8px; }
+    .quiz-q-text { font-size: 1em; }
+    .quiz-option { padding: 12px 12px; font-size: 0.98em; gap: 8px; }
+    .quiz-explain { font-size: 0.95em; padding: 12px 14px; }
+    .quiz-actions { display: flex; flex-direction: column; gap: 10px; margin: 24px 0 10px; }
+    .btn-primary, .btn-secondary { width: 100%; margin: 0; padding: 14px 20px; font-size: 1em; }
+    .score-banner { font-size: 1.05em; padding: 14px 16px; }
+    footer { font-size: 0.85em; padding: 0 10px; }
+  }
+  @media (max-width: 380px) {
+    header h1 { font-size: 1.15em; }
+    .quiz-q-text strong { display: block; margin-bottom: 4px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>Governance, Risk &amp; Responsible Use</h1>
+  <p>Chapter Explanation — Roman Urdu (Sabse Aasan Version)</p>
+</header>
+
+<h2>Shuruaat</h2>
+
+<div class="para-block"><span class="para-label">Intro:</span><p class="para-text">Ek company ka saal accha guzra AI ke sath. Sab teams AI use karti hain, isliye log har istemaal ko "AI decision" nahi samajhte. Phir ek manager ne customer ka naam aur account number wali spreadsheet AI chat mein upload kar di — jaldi mein, kisi qaida ko todne ke liye nahi. Company ko poora AI use rokna para investigate karne ke liye. Ek saadi si baat, jise kisi ne "decision" nahi samjha, itna bara masla ban gaya.</p></div>
+
+<div class="para-block"><span class="para-label">Zaroori baat:</span><p class="para-text">Koi bhi policy file khud AI ka screen nahi dekh sakti. Ye faisla aapke haath mein hota hai, jahan asal kaam hota hai. Ye chapter 4 aasan sawal deta hai jo jaldi poochay jaate hain, aur likh kar rakhe jaate hain taake manager bhi dekh sake.</p></div>
+
+<div class="para-block"><span class="para-label">Zaroori Alfaz:</span><p class="para-text">4 sawal = The Case, The Data, The Capability, The People. Accountability = zimmedari kis insaan par hai — kabhi tool par nahi jati. 3 jawab = fully appropriate, appropriate with review, inappropriate. Deciding factor = wo ek sawal jo asal faisla karta hai. Defined gate = review jismein pata ho kaun check karta hai, kya check karta hai, kab. Data tier = jaankari kitni sambhal ke rakhni hai — green, yellow, red. Redaction = task ko na chahiye wale fields hatana. Pseudonymized = naam badal diye gaye lekin list kisi ke pass abhi bhi hai. Anonymized = ab kisi insaan ki pehchaan nahi karta. Connector = ek approved raasta jo AI ko app tak le jata hai. Scopes = connector jo kaam kar sakta hai uski exact list. Skill = saved instructions jo AI ko apna kaam sikhati hain. Least privilege = jitni zaroorat utni hi access dena. Shadow AI = kaam ka data un tools se guzarna jo company ne kabhi approve nahi kiye. Governance Record = ek page jismein sab 4 jawab, saboot, aur owner likha ho.</p></div>
+
+<div class="diagram-box">
+<svg width="100%" viewBox="0 0 680 260" role="img">
+<title>Four questions diagram</title>
+<desc>Four questions decide responsible AI use: the Case, the Data, the Capability, the People. Each has three answers, and the middle answer is where judgment lives.</desc>
+<rect x="0" y="0" width="680" height="260" fill="#111111"/>
+<rect x="10" y="20" width="155" height="90" rx="8" fill="#2a2a2a" stroke="#8a8a8a" stroke-width="1"/>
+<text x="87" y="45" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f0f0">1. The Case</text>
+<text x="87" y="68" text-anchor="middle" font-size="10" fill="#aaa">Kya AI ye kaam</text>
+<text x="87" y="84" text-anchor="middle" font-size="10" fill="#aaa">kar sakta hai?</text>
+<rect x="175" y="20" width="155" height="90" rx="8" fill="#2a2a2a" stroke="#8a8a8a" stroke-width="1"/>
+<text x="252" y="45" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f0f0">2. The Data</text>
+<text x="252" y="68" text-anchor="middle" font-size="10" fill="#aaa">Kya ye jaankari</text>
+<text x="252" y="84" text-anchor="middle" font-size="10" fill="#aaa">andar ja sakti hai?</text>
+<rect x="340" y="20" width="155" height="90" rx="8" fill="#2a2a2a" stroke="#8a8a8a" stroke-width="1"/>
+<text x="417" y="45" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f0f0">3. The Capability</text>
+<text x="417" y="68" text-anchor="middle" font-size="10" fill="#aaa">Kya ye tool on</text>
+<text x="417" y="84" text-anchor="middle" font-size="10" fill="#aaa">karna safe hai?</text>
+<rect x="505" y="20" width="165" height="90" rx="8" fill="#2a2a2a" stroke="#8a8a8a" stroke-width="1"/>
+<text x="587" y="45" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f0f0">4. The People</text>
+<text x="587" y="68" text-anchor="middle" font-size="10" fill="#aaa">Kya ye kisi ko</text>
+<text x="587" y="84" text-anchor="middle" font-size="10" fill="#aaa">nuksaan de sakta?</text>
+<rect x="120" y="150" width="440" height="80" rx="8" fill="#3a2f10" stroke="#c9a227" stroke-width="1.5"/>
+<text x="340" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#ffd75e">Har sawal ke 3 jawab: Haan · Beech wala · Nahi</text>
+<text x="340" y="200" text-anchor="middle" font-size="12" fill="#e0c060">Beech wala jawab hi asal soch hai — wahan aap</text>
+<text x="340" y="216" text-anchor="middle" font-size="12" fill="#e0c060">ek naamzad cheez (insaan, control, ya rasta) likhte ho</text>
+</svg>
+<p class="diagram-caption">4 zaroori sawal, har ek ke 3 jawab — beech wala jawab hi asal judgment hai</p>
+</div>
+
+<h2>Sawal 1: The Case — Kya AI Ye Kaam Kar Sakta Hai?</h2>
+
+<div class="para-block"><span class="para-label">4 Screens:</span><p class="para-text">Reversibility (agar galti ho jaye, wapas theek ho sakti hai?), Consequence of error (galti ka kharcha kitna hai?), Human judgment (is kaam mein rishta/care chahiye jo insaan khud sambhale?), Accountability (zimmedari kis par hai, aur kya wo waqai check kar sakta hai?). Ye sawal sabse pehle poochte hain — agar AI ye kaam kare hi nahi, to baaki sawal matter nahi karte.</p></div>
+
+<div class="para-block"><span class="para-label">3 Jawab:</span><p class="para-text">Fully appropriate = kam risk, wapas theek ho sakta hai, AI khud kar sakta hai. Appropriate with review = AI kare, lekin ek naamzad insaan pehle check kare. Inappropriate = kaam insaan ke pass hi rehna chahiye, kyun ke nuksaan/zimmedari wapas nahi ho sakti. Deciding factor wo ek sawal hai jo asal mein classification decide karta hai — jaise billing reply mein "accountability" decide karta hai.</p></div>
+
+<div class="para-block"><span class="para-label">Defined Gate:</span><p class="para-text">"Koi check kar lega" sirf ek intention hai, control nahi. Defined gate mein 3 cheezein pata honi chahiye: kaun review karta hai, kya check karta hai, kab (output hard-to-undo hone se pehle). "Account manager delivery facts ko dispatch record se milata hai report bhejne se pehle" — ye ek asal control hai.</p></div>
+
+<h2>Sawal 2: The Data — Kya Ye Jaankari Andar Ja Sakti Hai?</h2>
+
+<div class="diagram-box">
+<svg width="100%" viewBox="0 0 680 220" role="img">
+<title>Three data tiers diagram</title>
+<desc>Three data tiers: green means generally permitted, yellow means check first or add a control, red means do not use through an unapproved route.</desc>
+<rect x="0" y="0" width="680" height="220" fill="#111111"/>
+<rect x="30" y="20" width="620" height="50" rx="6" fill="#14301c" stroke="#2e7d32" stroke-width="1"/>
+<text x="60" y="50" font-size="13" font-weight="700" fill="#8fe6a0">Green — aam tor par theek hai</text>
+<rect x="30" y="85" width="620" height="50" rx="6" fill="#3a2f10" stroke="#c9a227" stroke-width="1"/>
+<text x="60" y="115" font-size="13" font-weight="700" fill="#ffd75e">Yellow — pehle check karo, ya control lagao</text>
+<rect x="30" y="150" width="620" height="50" rx="6" fill="#3a1414" stroke="#c62828" stroke-width="1.5"/>
+<text x="60" y="180" font-size="13" font-weight="700" fill="#ff9e9e">Red — bina approved rasta, kabhi mat daalo</text>
+</svg>
+<p class="diagram-caption">3 Data Tiers — jab confuse ho to zyada sakht wale tier ko chuno</p>
+</div>
+
+<div class="para-block"><span class="para-label">3 Tiers aur Sahi Order:</span><p class="para-text">Order: pehle data ko classify karo, phir poocho task ko identifying details chahiye ya sirf pattern, phir route confirm karo, phir control chuno. Green = public material, anonymized data. Yellow = internal documents, customer/employee identifiers. Red = passwords, regulated/privileged data. Jab confuse ho, zyada sakht tier chuno.</p></div>
+
+<div class="para-block"><span class="para-label">Discriminator aur Redaction:</span><p class="para-text">Zaroori sawal: "kya task ko identifiers chahiye, ya sirf pattern?" Agar sirf pattern chahiye — redaction karo (na-zaroori fields hatao). Redaction 2 tareeqon se fail hoti hai: partial redaction (kuch clues reh jate hain jinse pehchana ja sake) aur redaction jo task ko hi tod de. Pseudonymized (labels wapas trace ho sakte hain) apna tier nahi khoti — sirf tab tier girti hai jab mapping list poori tarah khatam ho jaye.</p></div>
+
+<div class="para-block"><span class="para-label">Route Matter Karta Hai:</span><p class="para-text">Entry point = chat, project, connector, API, upload — har raaste mein retention/access/logging alag hoti hai. Sahi sawal "kya ye product approved hai?" nahi, balke "kya ye specific route is data aur is maqsad ke liye approved hai?" hai. Purpose = data pehle kis wajah se liya gaya tha — naya kaam usi wajah mein fit hona chahiye. Sandbox aur authorization alag cheezein hain — sandbox sirf execution ko limit karta hai, ye nahi batata data andar aana allow tha ya nahi.</p></div>
+
+<h2>Sawal 3: The Capability — Kya Ye Tool On Karna Safe Hai?</h2>
+
+<div class="para-block"><span class="para-label">Skill Software Hai, Prompt Nahi:</span><p class="para-text">Skill ki apni permission list nahi hoti — session mein jo bhi access hai, Skill usay poora reach kar sakti hai, sirf apne task ke liye zaroori hisse tak nahi. 5 checks: Source (kisne banaya), Reach (kya touch kar sakti hai), Fit (task ke liye zaroori hai ya zyada), Outside content (web/email/customer files parhegi?), Actions (send/pay/delete kar sakti hai?). Internal Skill bhi automatically vetted nahi hoti.</p></div>
+
+<div class="para-block"><span class="para-label">3 Outcomes:</span><p class="para-text">Enable (source pata, reach theek), Escalate (kuch unclear hai — specific sawal ke sath bhejo), Decline (reach zyada ya source unknown). Escalating sab kuch bhi kamzori hai jaise enabling sab kuch.</p></div>
+
+<div class="para-block"><span class="para-label">Trusted Tool, Untrusted Content:</span><p class="para-text">Ek tool trusted ho sakta hai, lekin wo content jo wo parhta hai (email, web page) untrusted ho sakta hai — isay prompt injection kehte hain, chupi hui instructions jo AI ko galat direction mein le jayein. Khatra sabse zyada barhta hai jab AI untrusted content parhe AUR consequential actions bhi le sake. Rule: sirf zaroori cheez parhne do, read-only rakho jab kaafi ho, send/delete/pay hamesha human gate ke peeche rakho.</p></div>
+
+<h2>Sawal 4: The People — Kya Ye Kisi Ko Nuksaan De Sakta Hai?</h2>
+
+<div class="para-block"><span class="para-label">5 Sawal:</span><p class="para-text">Kaun affected hai (wo bhi jo output kabhi dekhte hi nahi), unke liye kya galat ho sakta hai, kya wo notice ya challenge kar sakte hain, fair process kaisa dikhega, aur disclosure zaroori hai kya. Bias sirf data se nahi aata — prompt ke framing se bhi aa sakta hai (jaise "strongest candidates" khud ek unstated standard carry karta hai).</p></div>
+
+<div class="para-block"><span class="para-label">Exclusions Ko Dekho:</span><p class="para-text">Sabse asaan risk missed hoti hai jab system kisi group ko chhant deta hai aur log sirf bache hue par review karte hain — shortlists, fraud flags, priority ranking. Fix: exclusions ko bhi sample karo, sirf inclusions nahi.</p></div>
+
+<div class="para-block"><span class="para-label">Disclosure — Rule Pehle, Judgment Doosra:</span><p class="para-text">Pehle poocho: kya disclosure kisi rule se zaroori hai (law/policy/contract)? Agar koi rule na de, to poocho: kya AI ka istemaal janne se insaan ka nazariya badal jata (relationship)? Jab koi rule na ho aur case ordinary ho, disclose karo, chupao mat — chupana hi baad mein trust todta hai. Bara population, bara nuksaan, ya legal/employment ka sawal ho to escalate karo, verdict nahi, sawal apni reasoning ke sath.</p></div>
+
+<h2>Poore Kaam Mein Ek Sath</h2>
+
+<div class="para-block"><span class="para-label">Governance Record:</span><p class="para-text">Ek page, ek workflow ke liye, 5 hisse: The Case, The Data, The Capability, The People, aur The Evidence (success measure, failure threshold, kaun monitor karta hai, residual risk). Jo pata na ho wahan "OPEN QUESTION" likho aur sahi banda ko bhej do. Model, feature, data, audience, permission, policy, ya vendor terms badalne par record dobara check karo.</p></div>
+
+<div class="para-block"><span class="para-label">Jab Kuch Galat Ho Jaye:</span><p class="para-text">5 steps: 1) Failna ko rokna (aage mat bhejo). 2) Facts likho — kya hua, kaunsa data/route, kab. 3) Turant apni company ke incident path se report karo. 4) Facts saaf saaf batao, defend mat karo. 5) Incident owner ki hidayat follow karo — khud delete/notify mat karo. Delete karna sirf aapki visibility khatam karta hai, data nahi — ye galti ko chupana bana deta hai.</p></div>
+
+<div class="para-block"><span class="para-label">Governance Kyun Ghisti Hai:</span><p class="para-text">Chhoti roz marra ki decisions khatarnak hoti hain, kyun ke har ek "bohat chhoti" lagti hai count karne ke liye. Diligence gap = policy kya kehti hai aur log asal mein kya karte hain, is mein farak. Process ko audit karo, insaan ko nahi. Friction rule: agar approved raasta 10 steps ka hai aur galat raasta 1 step ka, log deadline mein wahi galat raasta lenge — friction ko theek karo, tools ko mat hatao.</p></div>
+
+<div class="summary-box">
+  <h2 style="margin-top:0; border:none;">End Summary (Aik Nazar Mein)</h2>
+  <ul>
+    <li>4 zaroori sawal: The Case, The Data, The Capability, The People — har ek ke 3 jawab, beech wala jawab hi asal judgment hai</li>
+    <li>Zimmedari kabhi tool par nahi jati — insaan hamesha accountable rehta hai</li>
+    <li>Data: pehle classify karo, phir poocho identifiers chahiye ya sirf pattern, phir route confirm karo</li>
+    <li>Skill ki apni permission list nahi hoti — puri session ki reach uski reach hoti hai</li>
+    <li>5 checks capability ke liye: Source, Reach, Fit, Outside content, Actions</li>
+    <li>Exclusions ko bhi sample karo, sirf inclusions nahi — warna fairness ka masla chhup jata hai</li>
+    <li>Disclosure: rule pehle poocho, phir apni judgment — chupana hi trust todta hai</li>
+    <li>Kuch galat ho jaye to rokna, likhna, report karna, sach batana, aur owner follow karna — delete mat karo</li>
+    <li>Governance chhoti roz marra ki decisions se ghista hai — process audit karo, friction theek karo</li>
+  </ul>
+</div>
+
+<div id="quiz-section">
+  <h2 style="margin-top:50px;">Quiz — 20 Real-World Scenario Questions</h2>
+  <p class="quiz-intro">Ye quiz seedhi seedhi definitions nahi poochta — har sawal ek real-world situation deta hai. Sab 20 sawal attempt karein phir "Quiz Submit Karein" dabayein.</p>
+  <div id="score-banner" class="score-banner" style="display:none;"></div>
+  <div id="quiz-questions"></div>
+  <div class="quiz-actions">
+    <button id="submitQuizBtn" class="btn-primary">Quiz Submit Karein</button>
+    <button id="retakeQuizBtn" class="btn-secondary" style="display:none;">Dobara Quiz Lein</button>
+  </div>
+</div>
+
+<footer>
+  Source: <a href="https://agentfactory.panaversity.org/docs/governance-risk-responsible-use-crash-course" target="_blank">https://agentfactory.panaversity.org/docs/governance-risk-responsible-use-crash-course</a>
+</footer>
+
+</div>
+
+<script>
+const quizData = [
+  {
+    q: "Ek support agent AI se billing complaint ka reply draft karwana chahta hai account record se. Kya ye kaam poori tarah AI ko de dena chahiye?",
+    options: ["Haan, AI khud kar sakta hai bina review ke", "Nahi — appropriate with review hai, kyun ke company customer ke paise ke baare mein jo bhi kaha jaye uski accountable rehti hai", "Nahi, ye kaam bilkul insaan ka hai", "Ye kaam AI ko dena hi nahi chahiye"],
+    correct: 1,
+    explain: "Deciding factor accountability hai — company accountable rehti hai facts ke liye, is liye support agent factual/tone check kare bhejne se pehle."
+  },
+  {
+    q: "Ek manager kehta hai 'someone will check it' apne AI workflow ke baare mein. Kya ye ek defined gate hai?",
+    options: ["Haan, review ka zikr kar diya ye kaafi hai", "Nahi — defined gate mein 3 cheezein zaroori hain: kaun check karta hai, kya check karta hai, kab", "Defined gate ki zaroorat sirf bare kaamon mein hoti hai", "Ye sirf legal kaamon mein zaroori hai"],
+    correct: 1,
+    explain: "'Someone will check it' sirf ek intention hai. Defined gate ek control hai jismein who, what, when teeno likhe hon."
+  },
+  {
+    q: "Ek project manager customer names aur account numbers wali spreadsheet upload karta hai spending trends dekhne ke liye. Kya usay names ki zaroorat hai?",
+    options: ["Haan, hamesha names dene chahiye", "Nahi — spending trends ko sirf pattern chahiye, names nahi, is liye identifiers pehle remove karne chahiye (redaction)", "Ye masla hi nahi hai, spreadsheet safe hai", "Names ke bina AI kaam nahi karega"],
+    correct: 1,
+    explain: "Discriminator sawal: kya task ko identifiers chahiye ya sirf pattern? Trends ke liye pattern kaafi hai — is liye names hata kar analysis karo."
+  },
+  {
+    q: "Ek user 'Customer 17' jaise labels use karta hai names ki jagah, lekin ek list kisi ke pass hai jo wapas names dikha sakti hai. Kya ye data anonymized ho gaya?",
+    options: ["Haan, ab ye kisi bhi jagah use ho sakta hai", "Nahi — ye pseudonymized hai, apna tier waisa hi rakhta hai jab tak mapping list mit na jaye", "Haan, labels lagana hi anonymization hai", "Ye ab red tier ban jata hai"],
+    correct: 1,
+    explain: "Pseudonymized data apni tier retain karta hai — kisi ke pass mapping list hone ka matlab hai wo abhi bhi trace ho sakta hai."
+  },
+  {
+    q: "Ek company ka AI product 'approved' hai. Kya iska matlab hai ke koi bhi data us mein daala ja sakta hai?",
+    options: ["Haan, product approved hai to sab theek hai", "Nahi — sahi sawal ye hai 'kya ye specific route is data aur is maqsad ke liye approved hai', product approval kaafi nahi", "Approval sirf paid plans ko milti hai", "Approval sirf red-tier data ke liye zaroori hai"],
+    correct: 1,
+    explain: "Route har entry point (chat, connector, API) mein alag hota hai — product approved hone ka matlab har route/data/purpose approved hona nahi hai."
+  },
+  {
+    q: "Ek user Claude ka code execution sandbox use kar raha hai sensitive file ke sath. Kya sandbox se pata chalta hai ke file allowed thi?",
+    options: ["Haan, sandbox authorization deta hai", "Nahi — sandbox sirf execution ko limit karta hai, ye nahi batata data andar aana allowed tha ya nahi", "Sandbox sirf red-tier data ke liye zaroori hai", "Sandbox hamesha data ko safe bana deta hai"],
+    correct: 1,
+    explain: "Sandbox execution boundary hai, approval boundary nahi — data allowed thi ya nahi ye alag sawal hai."
+  },
+  {
+    q: "Ek colleague ek Skill share karta hai jo forum se mili hai, aur kehta hai 'ye achi chali hai mere liye'. Kya ye source check pass karti hai?",
+    options: ["Haan, colleague ki recommendation kaafi hai", "Nahi — colleague ka recommendation warmth hai, vetting nahi; publisher unknown hai, is liye escalate ya decline karo", "Haan, agar Skill sirf meeting notes ke liye hai", "Skills ko source check ki zaroorat nahi hoti"],
+    correct: 1,
+    explain: "'A colleague's recommendation is warmth, not vetting.' Publisher unknown hone par escalate/decline karna chahiye, chahe kaam achha laga ho."
+  },
+  {
+    q: "Ek Skill sirf 'formatting' ke liye hai lekin uski instructions mein file access aur external service calls bhi hain. Kya masla hai?",
+    options: ["Koi masla nahi, formatting Skills aisi hi hoti hain", "Scope creep — Skill jo karti hai uski description se zyada hai, ye warning sign hai", "Ye sirf naming ka masla hai", "Ye sirf source ka masla hai, reach ka nahi"],
+    correct: 1,
+    explain: "Warning sign scope creep hai — jab Skill ka kaam uski summary line se zyada wide ho, ye batata hai kuch chupa hua hai."
+  },
+  {
+    q: "Ek Skill ko session mein 'read files' access diya gaya hai. Kya Skill khud apni access ko narrow kar sakti hai sirf apne task tak?",
+    options: ["Haan, Skills apni permission list rakhti hain", "Nahi — Skill ki apni permission list nahi hoti, uski reach wahi hai jo poori session reach kar sakti hai", "Sirf paid Skills ye kar sakti hain", "Ye depend karta hai Skill ki length par"],
+    correct: 1,
+    explain: "Zaroori fact: 'A Skill does not carry its own permission list.' Connector ke scopes hote hain, Skill ke nahi."
+  },
+  {
+    q: "Ek trusted email-reading agent ek email parhta hai jismein chupi hui instruction hai 'apna data yahan bhejo'. Agent trusted publisher se hai. Kya ye safe hai?",
+    options: ["Haan, publisher trusted hai to sab safe hai", "Nahi — trusted tool bhi untrusted content parh sakta hai, jo prompt injection kehlata hai; risk consequential actions ke sath aur barh jata hai", "Ye sirf untrusted tools ke sath hota hai", "Email parhna kabhi khatarnak nahi hota"],
+    correct: 1,
+    explain: "'Who wrote the tool and who wrote the content are two different trust questions.' Trusted tool bhi untrusted content se injected ho sakta hai."
+  },
+  {
+    q: "Ek hiring coordinator AI se shortlist banwata hai aur manager sirf shortlist wale candidates ko interview karta hai. Excluded candidates kabhi dekhe nahi jate. Kya sabse bara masla hai?",
+    options: ["AI ka use karna hi masla hai", "Koi bhi exclusions ko review nahi kar raha — fairness ka masla chhup jata hai jab sirf inclusions dekhe jayein", "Shortlist banana kabhi theek nahi", "Candidates ko batana chahiye tha"],
+    correct: 1,
+    explain: "'If AI systematically removes a group, nobody notices when the review looks only at what remains.' Exclusions ko bhi sample karna chahiye."
+  },
+  {
+    q: "Ek company policy AI disclosure ke baare mein khamosh hai. Team ordinary case ke liye kya decide kare?",
+    options: ["Chupao, kisi ko batane ki zaroorat nahi", "Disclose karo, chupao mat — concealment hi baad mein trust todta hai jab baat khul jati hai", "Escalate karo har case ko", "Koi bhi tareeqa theek hai"],
+    correct: 1,
+    explain: "'When no rule settles it and the case is ordinary, disclose rather than conceal.' Chupana hi trust ko baad mein damage karta hai."
+  },
+  {
+    q: "Ek AI notetaker meeting join karta hai bina kisi ko bataye. Kya ye theek hai?",
+    options: ["Haan, notetakers routine tooling hain, batane ki zaroorat nahi", "Nahi — poori meeting ke sab log affected hain, shuru mein announce karna zaroori hai, kuch jurisdictions mein sab ki consent bhi chahiye", "Sirf manager ko batana kaafi hai", "Notetaker ko batane ki zaroorat nahi kyun ke wo sirf record karta hai"],
+    correct: 1,
+    explain: "AI notetaker reach rakhta hai poori conversation tak — sab affected hain, is liye announce karna zaroori hai, consent bhi kuch jagah legally zaroori."
+  },
+  {
+    q: "Ek Governance Record mein 'owner' field khali hai kyun ke kisi ko pata nahi kaun responsible hai. Kya karna chahiye?",
+    options: ["Field khali chhor do", "OPEN QUESTION likho aur sahi banda ko bhej do", "Guess kar ke koi naam likh do", "Record hi mat banao"],
+    correct: 1,
+    explain: "'A blank field beats a guessed one... write OPEN QUESTION and send it to the right person.'"
+  },
+  {
+    q: "Ek employee galti se sensitive file ko galat chat mein daal deta hai. Uska pehla instinct hai chat delete kar dena. Kya ye sahi hai?",
+    options: ["Haan, delete karna sabse acha pehla move hai", "Nahi — delete karna sirf visibility khatam karta hai, data nahi, aur ye galti ko concealment bana deta hai", "Delete karna kabhi masla nahi hota", "Sirf red-tier data ke liye delete zaroori nahi"],
+    correct: 1,
+    explain: "'Deleting your visible copy may not delete organizational or vendor records... it turns a mistake into concealment.' Sahi move: rokna, likhna, report karna."
+  },
+  {
+    q: "Ek incident hone par employee apne aap decide kar leta hai ke data delete kar dena chahiye. Kya ye sahi hai?",
+    options: ["Haan, jaldi action lena zaroori hai", "Nahi — deletion, notification, disclosure jaise decisions incident owner leta hai, aap khud nahi", "Sirf manager ki ijazat kaafi hai", "Har koi apne decisions khud le sakta hai"],
+    correct: 1,
+    explain: "'Do not decide deletion, notification, disclosure, or evidence preservation on your own... they may have legal, contractual, security consequences.'"
+  },
+  {
+    q: "Ek marketer ne ek unreleased product spec ek unapproved AI chat mein daal di, aur ye kisi ko pata nahi chala mahino tak. Ye kaunsa concept hai?",
+    options: ["Ye ek bara dramatic incident hai", "Diligence gap ka example hai — policy kehti hai kuch aur, asal behavior kuch aur; chhoti decisions bhi risk create karti hain", "Ye normal aur theek hai", "Ye sirf shadow AI ka masla hai, diligence ka nahi"],
+    correct: 1,
+    explain: "Diligence gap: policy jo kehti hai aur log jo karte hain, unka farak. Ye chhoti, routine decisions se ghista hai, dramatic moments se nahi."
+  },
+  {
+    q: "Ek team ke approved AI process mein 10 steps hain, lekin unapproved shortcut sirf 1 step ka hai. Deadline pressure mein log kya karenge?",
+    options: ["Hamesha 10-step approved process follow karenge", "Log unapproved 1-step shortcut le lenge — friction hi shadow AI ki wajah banta hai", "Kuch nahi karenge, kaam ruk jayega", "Sirf managers shortcut lete hain"],
+    correct: 1,
+    explain: "'If the approved path takes ten steps and the unapproved path takes one, people under deadline pressure will find the one-step route.' Fix: friction kam karo, tool mat hatao."
+  },
+  {
+    q: "Ek company audit karti hai lekin sirf employees ko punish karne ke liye result use karti hai. Kya ye sahi approach hai?",
+    options: ["Haan, ye accountability barhata hai", "Nahi — agar audit hidden performance review ban jaye, log sirf apna cleanest kaam dikhayenge aur asal gaps chhup jayenge", "Audit kabhi zaroori nahi hoti", "Sirf managers ko audit karna chahiye"],
+    correct: 1,
+    explain: "'Audit the process, not the person.' Personal punishment ka darr logon ko sach chhupane par majboor karta hai."
+  },
+  {
+    q: "Ek workflow ka model 6 mahine pehle approve hua tha, lekin ab naya model version aa gaya hai. Kya purani approval abhi bhi valid hai?",
+    options: ["Haan, ek dafa approve hone ke baad hamesha valid rehta hai", "Nahi — model, feature, data, ya audience badalne par Governance Record dobara check karna chahiye", "Sirf saal mein ek baar check karna kaafi hai", "Model change ka koi asar nahi parta"],
+    correct: 1,
+    explain: "'Approved last year is not a reason to skip review if the thing that was approved is no longer the same thing.'"
+  },
+  {
+    q: "Ek manager AI se performance review draft karwata hai apne notes se. Data sensitive hai, task appropriate-with-review hai. Employees affected hain. Kya manager ko sab employees ke reviews ko compare karna chahiye?",
+    options: ["Nahi, har review alag se check karna kaafi hai", "Haan — manager ko consistency across employees bhi check karni chahiye, na sirf har paragraph alag se sahi lagta hai ya nahi", "Nahi, ye AI khud handle kar lega", "Sirf disclosure ka masla hai, consistency ka nahi"],
+    correct: 1,
+    explain: "Worked example ke mutabiq: manager 'consistency across employees' check kare, sirf individual paragraphs nahi — bias ek group ke against systematic ho sakta hai."
+  }
+];
+
+let userAnswers = new Array(quizData.length).fill(null);
+
+function renderQuiz() {
+  const container = document.getElementById('quiz-questions');
+  container.innerHTML = '';
+  quizData.forEach((item, idx) => {
+    const qDiv = document.createElement('div');
+    qDiv.className = 'quiz-question';
+    qDiv.id = 'q-block-' + idx;
+    let optionsHtml = '';
+    item.options.forEach((opt, oIdx) => {
+      optionsHtml += `
+        <label class="quiz-option" id="opt-${idx}-${oIdx}">
+          <input type="radio" name="q${idx}" value="${oIdx}" onchange="selectAnswer(${idx}, ${oIdx})">
+          <span>${opt}</span>
+        </label>`;
+    });
+    qDiv.innerHTML = `
+      <p class="quiz-q-text"><strong>Sawal ${idx + 1}:</strong> ${item.q}</p>
+      <div class="quiz-options">${optionsHtml}</div>
+      <p class="quiz-explain" id="explain-${idx}" style="display:none;"></p>
+    `;
+    container.appendChild(qDiv);
+  });
+}
+
+function selectAnswer(qIdx, oIdx) {
+  userAnswers[qIdx] = oIdx;
+}
+
+function submitQuiz() {
+  let score = 0;
+  let unanswered = 0;
+  quizData.forEach((item, idx) => {
+    const selected = userAnswers[idx];
+    if (selected === null) unanswered++;
+    for (let o = 0; o < item.options.length; o++) {
+      const label = document.getElementById(`opt-${idx}-${o}`);
+      label.querySelector('input').disabled = true;
+      if (o === item.correct) {
+        label.classList.add('correct-answer');
+      } else if (o === selected && selected !== item.correct) {
+        label.classList.add('wrong-answer');
+      }
+    }
+    if (selected === item.correct) score++;
+    const explainEl = document.getElementById(`explain-${idx}`);
+    explainEl.textContent = 'Wazahat: ' + item.explain;
+    explainEl.style.display = 'block';
+  });
+
+  const percent = Math.round((score / quizData.length) * 100);
+  const banner = document.getElementById('score-banner');
+  banner.style.display = 'block';
+  let msg = `Aapka Score: ${score} / ${quizData.length} (${percent}%)`;
+  if (unanswered > 0) msg += ` — ${unanswered} sawal chhoray gaye the.`;
+  if (percent >= 70) {
+    banner.className = 'score-banner pass';
+  } else {
+    banner.className = 'score-banner fail';
+    msg += ' — 70% se kam hai, chapter dobara review karein.';
+  }
+  banner.textContent = msg;
+  banner.scrollIntoView({behavior:'smooth', block:'start'});
+
+  document.getElementById('submitQuizBtn').style.display = 'none';
+  document.getElementById('retakeQuizBtn').style.display = 'inline-block';
+}
+
+function retakeQuiz() {
+  userAnswers = new Array(quizData.length).fill(null);
+  document.getElementById('score-banner').style.display = 'none';
+  document.getElementById('submitQuizBtn').style.display = 'inline-block';
+  document.getElementById('retakeQuizBtn').style.display = 'none';
+  renderQuiz();
+  document.getElementById('quiz-section').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+document.getElementById('submitQuizBtn').addEventListener('click', submitQuiz);
+document.getElementById('retakeQuizBtn').addEventListener('click', retakeQuiz);
+renderQuiz();
+</script>
+
+</body>
+</html>
